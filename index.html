@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayan Boubli - Portfolio</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+</head>
+
+<body class="dark-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Top Hero Image -->
+        <div class="hero-image animate-on-scroll">
+            <img src="assets/cave_painting_1.png" alt="Header Cave Painting">
+        </div>
+
+        <!-- Header Section -->
+        <header class="header animate-on-scroll">
+            <div class="header-text">
+                <h1>Rayan Boubli</h1>
+                <p class="subtitle">Welcome to my portfolio👋.</p>
+            </div>
+
+            <!-- Custom Radix-style Theme Switch -->
+            <div class="theme-switch-container">
+                <label class="switch-label">
+                    <div class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </div>
+                    <span class="switch-text">Light Mode</span>
+                </label>
+            </div>
+        </header>
+
+        <!-- Separator Line -->
+        <div class="separator animate-on-scroll delay-1"></div>
+
+        <!-- Masonry Grid Gallery -->
+        <main class="gallery">
+            <!-- Two side-by-side images -->
+            <div class="gallery-grid">
+                <div class="gallery-item vertical animate-on-scroll delay-2">
+                    <img src="assets/cave_painting_2.png" alt="Cave Painting Vertical" loading="lazy">
+                    <div class="hover-overlay">
+                        <p class="hover-text">Roblox GUI</p>
+                    </div>
+                </div>
+                <div class="gallery-column">
+                    <div class="gallery-item square animate-on-scroll delay-3">
+                        <img src="assets/cave_painting_3.png" alt="Cave Painting Square 1" loading="lazy">
+                        <div class="hover-overlay">
+                            <p class="hover-text">vslant</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item square animate-on-scroll delay-4">
+                        <img src="assets/cave_painting_5.png" alt="Cave Painting Square 2" loading="lazy">
+                        <div class="hover-overlay">
+                            <p class="hover-text">vslant new bot</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom full width image -->
+            <div class="gallery-item full-width animate-on-scroll delay-5">
+                <img src="assets/cave_painting_4.png" alt="Cave Painting Footer" loading="lazy">
+                <div class="hover-overlay">
+                    <p class="hover-text">Hostana new ERA</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Map Section -->
+    <section class="map-section animate-on-scroll delay-5 container" style="padding-top: 0; padding-bottom: 2rem;">
+        <div class="header-text">
+            <h1>Map 💀</h1>
+            <p class="subtitle">ctrl + scroll to zoom.</p>
+        </div>
+        <div class="map-container relative">
+            <div id="map" style="width: 100%; height: 400px; border-radius: 16px;"></div>
+            <div class="map-style-selector absolute">
+                <select id="map-style" class="map-dropdown">
+                    <option value="default">Default (Carto)</option>
+                    <option value="openstreetmap">OpenStreetMap</option>
+                    <option value="openstreetmap3d">OpenStreetMap 3D</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="contact-section animate-on-scroll delay-6 new-footer">
+        <canvas class="hyperspace-canvas" id="hyperspace-canvas"></canvas>
+        <div class="footer-content">
+            <h2 class="footer-heading hyperspace-text">rayan aura farming</h2>
+
+            <div class="footer-bottom">
+                <p class="footer-credit">Made by Rayan Boubli</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="X">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                            <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts for animations and logic -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
