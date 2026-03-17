@@ -1,5 +1,5 @@
 :root {
-    /* Dark Mode (Default) */
+    
     --bg-color: #000000;
     --text-primary: #e5e5e5;
     --text-secondary: #888888;
@@ -10,7 +10,7 @@
     --btn-hover: #1f1f1f;
     --btn-text: #cccccc;
 
-    /* Toggle Switch Colors (mimicking Radix) */
+    
     --switch-bg: #000000;
     --switch-knob: #ffffff;
     --switch-checked-bg: #e5e5e5;
@@ -18,7 +18,7 @@
 }
 
 [data-theme="light"] {
-    /* Light Mode */
+  
     --bg-color: #ffffff;
     --text-primary: #111111;
     --text-secondary: #555555;
@@ -64,7 +64,7 @@ body {
     z-index: 1;
 }
 
-/* Top Hero Image */
+
 .hero-image {
     width: 100%;
     aspect-ratio: 4 / 1;
@@ -86,7 +86,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Header */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -108,7 +108,7 @@ body {
     line-height: 1.5;
 }
 
-/* Theme Switcher */
+
 .theme-switch-container {
     display: flex;
     align-items: center;
@@ -190,7 +190,7 @@ input:checked+.slider:before {
     color: var(--text-primary);
 }
 
-/* Separator */
+
 .separator {
     height: 1px;
     width: 100%;
@@ -199,7 +199,7 @@ input:checked+.slider:before {
     transform-origin: left;
 }
 
-/* Gallery Layout */
+
 .gallery {
     display: flex;
     flex-direction: column;
@@ -236,23 +236,23 @@ input:checked+.slider:before {
     filter: brightness(0.9) grayscale(0.1);
 }
 
-/* Aspect ratios for gallery */
+
 .gallery-item.vertical {
     height: 100%;
 }
 
 .gallery-item.square {
     aspect-ratio: 1/1;
-    /* Enforce square logic */
+
 }
 
 .gallery-item.full-width {
     width: 100%;
     aspect-ratio: 2/1;
-    /* More panoramic */
+
 }
 
-/* Hover Effects for images */
+
 .hover-overlay {
     position: absolute;
     top: 0;
@@ -271,7 +271,6 @@ input:checked+.slider:before {
 
 .hover-text {
     color: #ffffff;
-    /* Must always be white against the black gradient for visibility */
     font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 0.02em;
@@ -293,7 +292,7 @@ input:checked+.slider:before {
     transform: translateY(0);
 }
 
-/* Contact Section (New Footer) */
+
 .new-footer {
     position: relative;
     border-radius: 20px;
@@ -343,7 +342,7 @@ input:checked+.slider:before {
     text-align: center;
     margin: auto 0;
 
-    /* Mix blend difference on gradient text */
+
     background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -400,7 +399,7 @@ input:checked+.slider:before {
     height: 18px;
 }
 
-/* Reveal Animations */
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -414,7 +413,7 @@ input:checked+.slider:before {
     transform: translateY(0);
 }
 
-/* Separator scale animation */
+
 .separator.animate-on-scroll {
     transform: scaleX(0);
 }
@@ -423,7 +422,7 @@ input:checked+.slider:before {
     transform: scaleX(1);
 }
 
-/* Staggered Delays */
+
 .delay-1 {
     transition-delay: 0.1s;
 }
@@ -448,7 +447,7 @@ input:checked+.slider:before {
     transition-delay: 0.6s;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 640px) {
     .header {
         flex-direction: column;
@@ -465,7 +464,7 @@ input:checked+.slider:before {
     }
 }
 
-/* --- Loading Screen & Page Reveal Animations --- */
+
 body.loading {
     overflow: hidden;
 }
@@ -506,7 +505,7 @@ body.loading {
     transition: width 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-/* Initial Flow State for main content elements */
+
 body>.container,
 body>.contact-section {
     opacity: 0;
@@ -517,7 +516,7 @@ body>.contact-section {
         transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base styles for loaded content */
+
 body.page-loaded>.container,
 body.page-loaded>.contact-section {
     opacity: 1;
@@ -525,7 +524,7 @@ body.page-loaded>.contact-section {
     transform: translateY(0);
 }
 
-/* Add slight staggered entrance for content pieces */
+
 body.page-loaded>.container {
     transition-delay: 0.1s;
 }
@@ -534,7 +533,7 @@ body.page-loaded>.contact-section {
     transition-delay: 0.2s;
 }
 
-/* Map Section */
+
 .map-container {
     position: relative;
     width: 100%;
